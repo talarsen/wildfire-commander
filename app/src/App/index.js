@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Routes, Route, NavLink } from "react-router-dom";
 
-import Tasks from "../Tasks";
+// import Tasks from "../Tasks";
 
 import styles from "./styles.module.scss";
 
@@ -31,7 +31,7 @@ const Home = () => (
       <h1>{process.env.REACT_APP_TITLE}</h1>
       <p>{process.env.REACT_APP_SUBTITLE}</p>
     </header>
-    <Tasks />
+    {/* <Tasks /> */}
   </>
 );
 
