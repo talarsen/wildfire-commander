@@ -6,9 +6,33 @@
   }
 }
 
+
+/* Wildfire Commander Header2  */
 .header {
-  p {
-    color: white;
-    margin-top: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #992222;
+  height: 180px;
+}
+.headingText {
+  color: white;
+  font-family: Merriweather;
+  font-size: 90px;
+  align-self: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #992222;
+  height: 80px;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .headingText {
+    font-size: 32px;
   }
 }

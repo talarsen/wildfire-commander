@@ -9,12 +9,12 @@ import styles from "./styles.module.scss";
 const App = () => (
   <>
     <header>
-      <nav className={styles.nav}>
+      {/* <nav className={styles.nav}>
         <NavLink to="/" end>
           Home
         </NavLink>{" "}
         | <NavLink to="dashboard">Dashboard</NavLink>
-      </nav>
+      </nav> */}
     </header>
     <main>
       <Routes>
@@ -24,7 +24,6 @@ const App = () => (
     </main>
   </>
 );
-
 const Home = () => (
   <>
     <header className={styles.header}>
@@ -34,7 +33,6 @@ const Home = () => (
     {/* <Tasks /> */}
   </>
 );
-
 const Dashboard = () => (
   <>
     <h1>Dashboard</h1>
