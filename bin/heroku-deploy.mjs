@@ -7,9 +7,9 @@ import dotenv from "dotenv";
 
 const DOTENV_FILE = path.join(
   new URL(".", import.meta.url).pathname,
-  "../app/.env",
+ "../app/env",
 );
-
+// "../app/env"
 let args;
 
 if (fs.existsSync(DOTENV_FILE)) {
