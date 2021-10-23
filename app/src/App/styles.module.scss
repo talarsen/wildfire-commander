@@ -1,38 +1,45 @@
-.nav {
-  a[class="active"] {
-    background-color: darkorange;
-    color: white;
-    text-decoration: none;
-  }
-}
 
-
-/* Wildfire Commander Header2  */
 .header {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #992222;
-  height: 180px;
-}
-.headingText {
-  color: white;
-  font-family: Merriweather;
-  font-size: 90px;
-  align-self: center;
-}
-
-@media only screen and (max-width: 700px) {
-  .header {
-  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #992222;
-  height: 80px;
-  }
+  height: auto;
+  background-color: #920000;
 }
-@media only screen and (max-width: 980px) {
-  .headingText {
-    font-size: 32px;
-  }
+
+.headerTitle {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: Merriweather;
+  font-size: 68px;
 }
+
+.headerSubtitle {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: Merriweather;
+  font-size: 28px;
+}
+
+@media (max-width: 720px){
+  .headerTitle {font-size: 46px;}
+  .headerSubtitle {font-size: 24px;}
+}
+
+@media (max-width: 550px){
+  .headerTitle {font-size: 46px;}
+  .headerSubtitle {font-size: 18px;}
+}
+
+@media (max-width: 412px){
+  .headerTitle {font-size: 46px;}
+  .headerSubtitle {font-size: 14px;}
+}
+@media (max-width: 320px){
+  .headerTitle {font-size: 46px;}
+  .headerSubtitle {font-size: 12px;}
+}
+
