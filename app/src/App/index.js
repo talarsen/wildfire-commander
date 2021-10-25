@@ -3,14 +3,14 @@ import * as React from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
 
 // import Tasks from "../Tasks";
-import Header from "../components/Header";
+import Header1 from "../components/Header1";
 
 // import styles from "./styles.module.scss";
 
 const App = () => (
   <>
     <header>
-      <Header />
+      <Header1 />
     </header>
     <main>
       {/* <nav className={styles.nav}>
