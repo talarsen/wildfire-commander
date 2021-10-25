@@ -1,43 +1,39 @@
 import * as React from "react";
 
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // import Tasks from "../Tasks";
+
 import Header1 from "../components/Header1";
+import GreetingImage from "../components/GreetingImage";
+import NavBar from "../components/NavBar";
 
-// import styles from "./styles.module.scss";
 
-const App = () => (
+import styles from "./styles.module.scss";
+
+const App = () => {
+  return (
+    <>
+      <header>
+        <Header1 />
+      </header>
+      <NavBar />
+      <main style={{ height: "100vh" }}>
+        <div>
+          <GreetingImage number={1511} />
+        </div>
+        <Routes>
+          <Route exact path="/incident1" render={incidentNumber} />
+          <Route exact path="/incident2" render={incidentNumber} />
+          <Route exact path="/incident3" render={incidentNumber} />
+        </Routes>
+      </main>
+    </>
+  );
+};
+const incidentNumber = () => (
   <>
-    <header>
-      <Header1 />
-    </header>
-    <main>
-      {/* <nav className={styles.nav}>
-        <NavLink to="/" end>
-          Home
-        </NavLink>{" "}
-        | <NavLink to="dashboard">Dashboard</NavLink>
-      </nav> */}
-      <Routes>
-        {/* <Route path="/" element= /> */}
-        {/* <Route path="/" element={<Dashboard />} /> */}
-      </Routes>
-    </main>
-  </>
-);
-// const Home = () => (
-//   <>
-//     <header className={styles.header}>
-//       <h1 className={styles.headingText}>{process.env.REACT_APP_TITLE}</h1>
-//       {/* <p className={styles.subtitle}>{process.env.REACT_APP_SUBTITLE}</p> */}
-//     </header>
-//     {/* <Tasks /> */}
-//   </>
-// );
-const Dashboard = () => (
-  <>
-    <h1>Dashboard</h1>
+    <h1> This is incident 1</h1>
   </>
 );
 
