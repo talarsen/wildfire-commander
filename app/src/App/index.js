@@ -3,11 +3,14 @@ import * as React from "react";
 import { Routes, Route } from "react-router-dom";
 
 // import Tasks from "../Tasks";
+
+import Header1 from "../components/Header1";
 import GreetingImage from "../components/GreetingImage";
-import Header from "../components/Header";
+import Header1 from "../components/Header1";
 import Incident from "../components/Incident.js";
 // import IncidentMap from "../components/IncidentMap";
 import NavBar from "../components/NavBar";
+
 
 import styles from "./styles.module.scss";
 
@@ -15,7 +18,7 @@ const App = () => {
   return (
     <>
       <header>
-        <Header />
+        <Header1 />
       </header>
       <NavBar />
       <main style={{ height: "100vh" }}>
