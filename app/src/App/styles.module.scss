@@ -1,14 +1,45 @@
-.nav {
-  a[class="active"] {
-    background-color: darkorange;
-    color: white;
-    text-decoration: none;
-  }
-}
 
 .header {
-  p {
-    color: white;
-    margin-top: 0;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: #920000;
 }
+
+.headerTitle {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: Merriweather;
+  font-size: 68px;
+}
+
+.headerSubtitle {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: Merriweather;
+  font-size: 28px;
+}
+
+@media (max-width: 720px){
+  .headerTitle {font-size: 46px;}
+  .headerSubtitle {font-size: 24px;}
+}
+
+@media (max-width: 550px){
+  .headerTitle {font-size: 46px;}
+  .headerSubtitle {font-size: 18px;}
+}
+
+@media (max-width: 412px){
+  .headerTitle {font-size: 46px;}
+  .headerSubtitle {font-size: 14px;}
+}
+@media (max-width: 320px){
+  .headerTitle {font-size: 46px;}
+  .headerSubtitle {font-size: 12px;}
+}
+
