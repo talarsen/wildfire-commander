@@ -5,6 +5,8 @@ import { Routes, Route } from "react-router-dom";
 // import Tasks from "../Tasks";
 import GreetingImage from "../components/GreetingImage";
 import Header from "../components/Header";
+import Incident from "../components/Incident.js";
+// import IncidentMap from "../components/IncidentMap";
 import NavBar from "../components/NavBar";
 
 import styles from "./styles.module.scss";
@@ -17,9 +19,10 @@ const App = () => {
       </header>
       <NavBar />
       <main style={{ height: "100vh" }}>
-        <div>
+        {/* <div>
           <GreetingImage number={1511} />
-        </div>
+        </div> */}
+        <Incident />
         <Routes>
           <Route exact path="/incident1" render={incidentNumber} />
           <Route exact path="/incident2" render={incidentNumber} />

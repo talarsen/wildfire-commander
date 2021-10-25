@@ -69,3 +69,33 @@
   font-size: 1.2rem;
   padding: 20px;
 }
+/****Incident Title *****/
+.incidentTitle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: pink;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  font-size: 3em;
+}
+
+.incidentNumber {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: green;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+}
+/****Incident Map *****/
+
+.map {
+  width: 25vw;
+  height: 25vw;
+  position: relative;
+  float: right;
+  margin-top: 75px;
+  margin-right: 150px; 
+}
