@@ -8,7 +8,7 @@ const IncidentMap = ({ center, zoom }) => {
     <div className={styles.map}>
       <GoogleMapReact
         bootstrapURLKeys={{
-          key: process.env.GOOGLE_REACT_INCIDENT_MAP,
+          key: process.env.REACT_APP_INCIDENT_MAP,
           language: "en",
         }}
         defaultCenter={center}
