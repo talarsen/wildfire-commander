@@ -13,17 +13,22 @@ import NavBar from "../components/NavBar";
 import styles from "./styles.module.scss";
 
 const App = () => {
+  const [incidentNumber, setIncidentNumber] = React.useState(54321);
+
   return (
     <>
       <header>
         <Header1 />
       </header>
-      <NavBar />
+      <NavBar
+        incidentNumber={incidentNumber}
+        setIncidentNumber={setIncidentNumber}
+      />
       <main style={{ height: "100vh" }}>
         {/* <div>
           <GreetingImage number={1511} />
         </div> */}
-        <Incident />
+        <Incident incidentNumber={incidentNumber} />
         <Routes>
           <Route exact path="/incident1" render={incidentNumber} />
           <Route exact path="/incident2" render={incidentNumber} />
@@ -33,10 +38,10 @@ const App = () => {
     </>
   );
 };
-const incidentNumber = () => (
-  <>
-    <h1> This is incident 1</h1>
-  </>
-);
+// const incidentNumber = () => (
+//   <>
+//     <h1> This is incident 1</h1>
+//   </>
+// );
 
 export default App;

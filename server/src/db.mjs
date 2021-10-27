@@ -10,11 +10,10 @@ export const getIncidents = () => db.any("SELECT * FROM incidents");
 
 //get ONE incident
 //not much different from get all but specify params in route.
-export const getOneIncident = () =>
-  db.any("SELECT * FROM incidents WHERE incident_number = ${incident_number}");
-console.log(getOneIncident);
-// export const addTask = (name) =>
-//   db.one("INSERT INTO tasks(name) VALUES($<name>) RETURNING *", { name });
+export const getOneIncident = (incident_number) =>
+  db.one("SELECT * FROM incidents WHERE incident_number = $1", [
+    incident_number,
+  ]);
 
 function initDb() {
   let connection;

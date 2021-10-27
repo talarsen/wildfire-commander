@@ -2,10 +2,19 @@ import React from "react";
 
 import Dropdown from "react-bootstrap/Dropdown";
 import { Link } from "react-router-dom";
+
+import * as apiClient from "../apiClient";
 // import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 function ChooseFire({ setIncidentNumber }) {
+  const [incidents, setIncidents] = React.useState([]);
+
+  const loadIncidents = async () =>
+    setIncidents(await apiClient.getIncidents());
+  React.useEffect(() => {
+    loadIncidents();
+  }, []);
   const onSelect = (eventKey) => {
     setIncidentNumber(eventKey);
   };
@@ -21,15 +30,13 @@ function ChooseFire({ setIncidentNumber }) {
           </Dropdown.Toggle>
 
           <Dropdown.Menu variant="dark">
-            <Link to="/incidentNumber1">
-              <Dropdown.Item eventKey={"fire1"}>Fire 1</Dropdown.Item>
-            </Link>
-            <Link to="incidentNumber2">
-              <Dropdown.Item eventKey={"fire2"}>Fire 2</Dropdown.Item>
-            </Link>
-            <Link to="incidentNumber3">
-              <Dropdown.Item eventKey={"fire3"}>Fire 3</Dropdown.Item>
-            </Link>
+            {incidents.map((incident) => (
+              <Link to="">
+                <Dropdown.Item eventKey={incident.incident_number}>
+                  {incident.incident_name}
+                </Dropdown.Item>
+              </Link>
+            ))}
           </Dropdown.Menu>
         </Dropdown>
       </div>
