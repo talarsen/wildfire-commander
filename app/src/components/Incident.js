@@ -8,33 +8,21 @@ const Incident = ({ incidentNumber }) => {
   const [incident, setIncident] = React.useState([]);
 
   const loadIncident = async () =>
-    setIncident(await apiClient.getOneIncident());
-
+    setIncident(await apiClient.getOneIncident(incidentNumber));
   React.useEffect(() => {
     loadIncident();
-  }, []);
-  const incident_number = incident.filter((incident) => {
-    //the incident number should not be hard coded
-    return incident.incident_number === 54321;
-  });
-  console.log(incident_number);
+  }, [incidentNumber]);
+
   return (
     <>
       <div>
-        {incident_number.map((incident) => (
-          <>
-            <div>
-              <h1 className={styles.incidentTitle}>{incident.incident_name}</h1>
-            </div>
-            <div>
-              <h3 className={styles.incidentNumber}>
-                {incident.incident_number}
-              </h3>
-            </div>
-          </>
-        ))}
+        <div>
+          <h1 className={styles.incidentTitle}>{incident.incident_name}</h1>
+        </div>
+        <div>
+          <h3 className={styles.incidentNumber}>{incident.incident_number}</h3>
+        </div>
       </div>
-      {/* <IncidentList /> */}
       <div className={styles.incidentMap}>
         <IncidentMap incidentNumber={incidentNumber} />
       </div>

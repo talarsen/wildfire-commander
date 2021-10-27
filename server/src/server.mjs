@@ -5,7 +5,9 @@ import incidentRouter from "./incidentRouter.mjs";
 
 const app = express();
 
+//2 diff urls that mean the same thing this the base of all the incident router routes
 app.use("/api/incidents", incidentRouter);
+//Remove this line
 app.use("/api/incident", incidentRouter);
 
 // Do not comment out or delete this end point. The React development server

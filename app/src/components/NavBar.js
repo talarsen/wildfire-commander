@@ -12,8 +12,7 @@ import ChooseFire from "./ChooseFire";
 
 // import Dropdown from "./Dropdown";
 
-function NavBar() {
-  const [incidentNumber, setIncidentNumber] = useState(null);
+function NavBar({ incidentNumber, setIncidentNumber }) {
   return (
     <>
       <nav className={styles.navbar}>

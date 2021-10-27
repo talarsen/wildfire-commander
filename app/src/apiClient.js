@@ -1,6 +1,7 @@
 export const getIncidents = () => _get("/api/incidents");
 
-export const getOneIncident = () => _get("/api/incident");
+export const getOneIncident = (incident_number) =>
+  _get(`/api/incident/${incident_number}`);
 
 // export const addTask = (name) => _post("/api/tasks", { name });
 
