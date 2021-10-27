@@ -39,6 +39,13 @@ const handleApiLoaded = (map, maps) => {
     { lat: 40.01, lng: -121.23 },
   ];
 
+  const caldor = [
+    { lat: 38.73, lng: -120.53 },
+    { lat: 38.69, lng: -120.53 },
+    { lat: 38.83, lng: -120.04 },
+    { lat: 38.73, lng: -120.53 },
+  ];
+
   let bermudaTriangle = new maps.Polygon({
     paths: polygon,
     strokeColor: "red",
@@ -48,6 +55,16 @@ const handleApiLoaded = (map, maps) => {
     fillOpacity: 0.35,
   });
   bermudaTriangle.setMap(map);
+
+  let caldorTriangle = new maps.Polygon({
+    paths: caldor,
+    strokeColor: "red",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "#FF0000",
+    fillOpacity: 0.35,
+  });
+  caldorTriangle.setMap(map);
 };
 
 export default IncidentMap;
