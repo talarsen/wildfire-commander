@@ -6,10 +6,15 @@ load_dotenv_if_exists();
 
 const db = initDb();
 
-export const getTasks = () => db.any("SELECT * FROM tasks");
+export const getIncidents = () => db.any("SELECT * FROM incidents");
 
-export const addTask = (name) =>
-  db.one("INSERT INTO tasks(name) VALUES($<name>) RETURNING *", { name });
+//get ONE incident
+//not much different from get all but specify params in route.
+export const getOneIncident = () =>
+  db.any("SELECT * FROM incidents WHERE incident_number = ${incident_number}");
+console.log(getOneIncident);
+// export const addTask = (name) =>
+//   db.one("INSERT INTO tasks(name) VALUES($<name>) RETURNING *", { name });
 
 function initDb() {
   let connection;
