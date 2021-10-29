@@ -18,7 +18,6 @@ function NavBar({ incidentNumber, setIncidentNumber }) {
       <nav className={styles.navbar}>
         <ChooseFire setIncidentNumber={setIncidentNumber} />
       </nav>
-      {incidentNumber}
     </>
   );
 }

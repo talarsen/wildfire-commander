@@ -4,6 +4,7 @@ import styles from "../App/styles.module.scss";
 import * as apiClient from "../apiClient";
 
 import IncidentMap from "./IncidentMap";
+import IncidentSummary from "./IncidentSummary";
 const Incident = ({ incidentNumber }) => {
   const [incident, setIncident] = React.useState([]);
 
@@ -20,12 +21,13 @@ const Incident = ({ incidentNumber }) => {
           <h1 className={styles.incidentTitle}>{incident.incident_name}</h1>
         </div>
         <div>
-          <h3 className={styles.incidentNumber}>{incident.incident_number}</h3>
+          <h3 className={styles.incidentNumber}>
+            CA-BTU-00{incident.incident_number}
+          </h3>
         </div>
       </div>
-      <div className={styles.incidentMap}>
-        <IncidentMap incidentNumber={incidentNumber} />
-      </div>
+      <IncidentSummary incidentNumber={incidentNumber} />
+      <IncidentMap incidentNumber={incidentNumber} />
     </>
   );
 };

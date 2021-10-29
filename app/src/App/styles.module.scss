@@ -74,17 +74,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: pink;
+  // background-color: pink;
   font-weight: bold;
   font-family: 'Oswald', sans-serif;
   font-size: 3em;
+  color: #922222;
 }
 
 .incidentNumber {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: green;
+  // background-color: green;
+  color: #922222;
   font-weight: bold;
   font-family: 'Oswald', sans-serif;
   font-size: 2em;
@@ -92,10 +94,74 @@
 /****Incident Map *****/
 
 .map {
+  display: inline;
   width: 25vw;
   height: 25vw;
   position: relative;
   float: right;
-  margin-top: 75px;
+  margin-top: 35px;
   margin-right: 150px; 
+}
+
+
+/////*** fire Summary Cards ******////@at-root
+
+
+h2{
+  font-family: 'Merriweather', serif;
+  margin-left: 25px;
+}
+.summaryContainer {
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin-left: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+    transform-style: preserve-3d;
+    border-radius: 30px;
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    // box-shadow: 2px 2px 15px 3px rgba(0,0,0,0.25), -10px -10px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transition: 0.4s;
+    transition: transform 250ms;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.cardIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 52px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color:#3A3B3C;
+}
+.cardTitle {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+h5 {
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+}
+
+h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bolder;
+  color: #920000;
 }
