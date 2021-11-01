@@ -5,15 +5,36 @@ import * as apiClient from "../apiClient";
 
 import IncidentMap from "./IncidentMap";
 import IncidentSummary from "./IncidentSummary";
+import Weather from "./Weather";
 const Incident = ({ incidentNumber }) => {
   const [incident, setIncident] = React.useState([]);
-
+  const [lat, setLat] = React.useState([]);
+  const [long, setLong] = React.useState([]);
+  const [data, setData] = React.useState([]);
   const loadIncident = async () =>
     setIncident(await apiClient.getOneIncident(incidentNumber));
   React.useEffect(() => {
     loadIncident();
   }, [incidentNumber]);
 
+  /*Open Weather API*/
+  React.useEffect(() => {
+    const fetchData = async () => {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        setLat(position.coords.latitude);
+        setLong(position.coords.longitude);
+      });
+      await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_OPENWEATHER}`,
+      )
+        .then((res) => res.json())
+        .then((result) => {
+          setData(result);
+          console.log(result);
+        });
+    };
+    fetchData();
+  }, [lat, long]);
   return (
     <>
       <div>
@@ -27,6 +48,13 @@ const Incident = ({ incidentNumber }) => {
         </div>
       </div>
       <IncidentSummary incidentNumber={incidentNumber} />
+      <div className="App">
+        {typeof data.main != "undefined" ? (
+          <Weather weatherData={data} />
+        ) : (
+          <div></div>
+        )}
+      </div>
       <IncidentMap incidentNumber={incidentNumber} />
     </>
   );
