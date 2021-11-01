@@ -10,7 +10,7 @@ const Incident = ({ incidentNumber }) => {
   const [incident, setIncident] = React.useState([]);
   const [lat, setLat] = React.useState([]);
   const [long, setLong] = React.useState([]);
-  const [data, setData] = React.useState([]);
+  const [weatherData, setWeatherData] = React.useState([]);
   const loadIncident = async () =>
     setIncident(await apiClient.getOneIncident(incidentNumber));
   React.useEffect(() => {
@@ -29,7 +29,7 @@ const Incident = ({ incidentNumber }) => {
       )
         .then((res) => res.json())
         .then((result) => {
-          setData(result);
+          setWeatherData(result);
           console.log(result);
         });
     };
@@ -49,8 +49,8 @@ const Incident = ({ incidentNumber }) => {
       </div>
       <IncidentSummary incidentNumber={incidentNumber} />
       <div className="App">
-        {typeof data.main != "undefined" ? (
-          <Weather weatherData={data} />
+        {typeof weatherData.main != "undefined" ? (
+          <Weather weatherData={weatherData} />
         ) : (
           <div></div>
         )}

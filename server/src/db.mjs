@@ -11,7 +11,7 @@ export const getIncidents = () => db.any("SELECT * FROM incidents");
 //get ONE incident
 //not much different from get all but specify params in route.
 export const getOneIncident = (incident_number) =>
-  db.one("SELECT * from incidents WHERE incident_number = $1", [
+  db.one("SELECT * FROM incidents WHERE incident_number = $1", [
     incident_number,
   ]);
 

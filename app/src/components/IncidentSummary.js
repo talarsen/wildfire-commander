@@ -23,17 +23,17 @@ const IncidentSummary = ({ incidentNumber }) => {
           </div>
           <div className={styles.cardTitle}>
             <h5>Start Date</h5>
-            <h6>{incident.start_date}</h6>
+            <h4>{incident.start_date}</h4>
           </div>
         </div>
         <div className={styles.card}>
-          <div class={styles.cardIcon}>
+          <div className={styles.cardIcon}>
             {" "}
             <Icon icon="carbon:time" />{" "}
           </div>
           <div className={styles.cardTitle}>
             <h5>Start Time</h5>
-            <h6>{incident.start_time}</h6>
+            <h4>{incident.start_time}</h4>
           </div>
         </div>
         <div className={styles.card}>
@@ -43,7 +43,7 @@ const IncidentSummary = ({ incidentNumber }) => {
           </div>
           <div className={styles.cardTitle}>
             <h5>Cause</h5>
-            <h6>{incident.cause}</h6>
+            <h4>{incident.cause}</h4>
           </div>
         </div>
         <div className={styles.card}>
@@ -53,7 +53,7 @@ const IncidentSummary = ({ incidentNumber }) => {
           </div>
           <div className={styles.cardTitle}>
             <h5>Injuries</h5>
-            <h6>{incident.injuries}</h6>
+            <h4>{incident.injuries}</h4>
           </div>
         </div>
         <div className={styles.card}>
@@ -63,7 +63,7 @@ const IncidentSummary = ({ incidentNumber }) => {
           </div>
           <div className={styles.cardTitle}>
             <h5>Fatalities</h5>
-            <h6>{incident.fatalities}</h6>
+            <h4>{incident.fatalities}</h4>
           </div>
         </div>
       </div>

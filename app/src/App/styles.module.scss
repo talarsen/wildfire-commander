@@ -160,7 +160,7 @@ h5 {
   font-weight: bold;
 }
 
-h6 {
+h4 {
   font-family: 'Oswald', sans-serif;
   font-weight: bolder;
   color: #920000;
@@ -170,22 +170,16 @@ h6 {
 
 .weatherContainer {
   // background-color: pink;
-  display: inline-flex;
+  display: flex;
   justify-content: flex-start;
   width: 25%;
-  margin-left: 25px;
+  margin-left: 20px;
   flex-wrap: wrap;
 }
 
-.weatherHeading {
-  display: flex;
-  flex-wrap: no-wrap;
-  background-color: white;
-  margin-left: 0px;
-}
 .weatherCard {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: flex-start;
   transform-style: preserve-3d;
   border-radius: 30px;
@@ -204,21 +198,43 @@ h6 {
 }
 
 .weatherCardIcon {
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
   justify-content: center;
   align-items: center;
   font-size: 52px;
   margin-top: 30px;
-  margin-bottom: 30px;
   color:#3A3B3C;
 }
 .weatherCardTitle {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: right;
-  align-items: center;
-  color: #000;
+  padding-top: 20px;
   margin-left: 20px;
-  margin-bottom: 5px;
+}
+
+.weatherCardTitle p {
+  display: flex;
+  justify-content: center;
+  color: #920000;
+  font-size: 48px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.weatherCardTitle h4 {
+  display: flex;
+  justify-content: center;
+  color: #920000;
+  font-size: 48px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.weatherSubtitle {
+  color: #920000;
+  font-size:32px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.weatherIcon {
+  color: #920000;
+  font-size: 48px;
 }
