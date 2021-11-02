@@ -19,6 +19,8 @@ const Weather = ({ weatherData }) => {
     weatherIcon = <Icon icon="fontisto:sun" />;
   } else if (weatherData.weather[0].main === "Clouds") {
     weatherIcon = <Icon icon="bi:clouds" />;
+  } else if (weatherData.weather[0].main === "Haze") {
+    weatherIcon = <Icon icon="bi:cloud-haze-1" />;
   }
 
   return (
@@ -54,7 +56,7 @@ const Weather = ({ weatherData }) => {
               <span className={styles.weatherSubtitle}>
                 {" "}
                 {weatherData.weather[0].description}
-                <span>{weatherIcon}</span>
+                <span> {weatherIcon}</span>
               </span>
             </h5>
           </div>
