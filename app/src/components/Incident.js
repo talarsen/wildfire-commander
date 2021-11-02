@@ -20,9 +20,11 @@ const Incident = ({ incidentNumber }) => {
   /*Open Weather API*/
   React.useEffect(() => {
     const fetchData = async () => {
+      // navigator.geolocation.getCurrentPosition
       navigator.geolocation.getCurrentPosition(function (position) {
-        setLat(position.coords.latitude);
-        setLong(position.coords.longitude);
+        setLat(incident.lat);
+        setLong(incident.lng);
+        // setLong(position.coords.longitude);
       });
       await fetch(
         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_OPENWEATHER_API_KEY}`,
@@ -34,7 +36,7 @@ const Incident = ({ incidentNumber }) => {
         });
     };
     fetchData();
-  }, [lat, long]);
+  }, [lat, long, incident.lat, incident.lng]);
   return (
     <>
       <div>
