@@ -25,7 +25,7 @@ const Incident = ({ incidentNumber }) => {
         setLong(position.coords.longitude);
       });
       await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_OPENWEATHER}`,
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_OPENWEATHER_API_KEY}`,
       )
         .then((res) => res.json())
         .then((result) => {
