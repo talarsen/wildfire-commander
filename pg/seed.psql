@@ -31,7 +31,13 @@ CREATE TABLE public.incidents (
     start_time time without time zone,
     cause text,
     injuries integer,
-    fatalities integer
+    fatalities integer,
+    lat numeric,
+    lng numeric,
+    acreage integer,
+    percent_contained integer,
+    current_evacuations integer,
+    fuels_involved text
 );
 
 
@@ -76,10 +82,11 @@ ALTER TABLE ONLY public.tasks ALTER COLUMN id SET DEFAULT nextval('public.tasks_
 -- Data for Name: incidents; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.incidents (incident_number, incident_name, start_date, start_time, cause, injuries, fatalities) FROM stdin;
-54321	Dixie	2021-07-14	13:00:00	undetermined	100	0
-2468	Caldor	2021-08-22	15:00:00	arson	5	0
-4321	River	2021-07-24	11:00:00	powerlines	2	0
+COPY public.incidents (incident_number, incident_name, start_date, start_time, cause, injuries, fatalities, lat, lng, acreage, percent_contained, current_evacuations, fuels_involved) FROM stdin;
+2468	Caldor	2021-08-22	15:00:00	arson	5	0	38.73	-120.53	222000	76	50	primarily timber litter with shrub and grass understory (TU5). There are also areas that contain primarily shrub and brush with a heavy grass component. Fine fuel moistures are trending upwards with cloudy weather and higher humidity. Live fuel as well as heavy fuel moistures remain very low.
+54321	Dixie	2021-07-14	13:00:00	undetermined	100	0	40.01	-121.23	960213	76	50	primarily timber litter with shrub and grass understory (TU5). There are also areas that contain primarily shrub and brush with a heavy grass component.
+4321	River	2021-07-24	11:00:00	powerlines	2	0	39.13	-120.93	97528	10	1500	heavy timber and shrub.
+56789	Lava	2021-06-20	21:00:00	lightning	10	1	41.31	-122.31	26000	50	120	heavy timber and shrub.
 \.
 
 
