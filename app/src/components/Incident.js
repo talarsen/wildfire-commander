@@ -57,7 +57,13 @@ const Incident = ({ incidentNumber }) => {
           <div></div>
         )}
       </div>
-      <IncidentMap incidentNumber={incidentNumber} />
+      <IncidentMap
+        center={{
+          lat: parseFloat(incident.lat),
+          lng: parseFloat(incident.lng),
+        }}
+        incidentNumber={incidentNumber}
+      />
     </>
   );
 };
