@@ -7,9 +7,7 @@ import IncidentMap from "./IncidentMap";
 import IncidentSummary from "./IncidentSummary";
 import Weather from "./Weather";
 const Incident = ({ incidentNumber }) => {
-  const [incident, setIncident] = React.useState([]);
-  const [lat, setLat] = React.useState([]);
-  const [long, setLong] = React.useState([]);
+  const [incident, setIncident] = React.useState(null);
   const [weatherData, setWeatherData] = React.useState([]);
   const loadIncident = async () =>
     setIncident(await apiClient.getOneIncident(incidentNumber));
@@ -20,23 +18,24 @@ const Incident = ({ incidentNumber }) => {
   /*Open Weather API*/
   React.useEffect(() => {
     const fetchData = async () => {
-      // navigator.geolocation.getCurrentPosition
-      navigator.geolocation.getCurrentPosition(function (position) {
-        setLat(incident.lat);
-        setLong(incident.lng);
-        // setLong(position.coords.longitude);
-      });
-      await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_OPENWEATHER_API_KEY}`,
-      )
-        .then((res) => res.json())
-        .then((result) => {
-          setWeatherData(result);
-          console.log(result);
-        });
+      if (incident !== null)
+        await fetch(
+          `https://api.openweathermap.org/data/2.5/weather?lat=${incident.lat}&lon=${incident.lng}&units=imperial&APPID=${process.env.REACT_APP_OPENWEATHER_API_KEY}`,
+        )
+          .then((res) => res.json())
+          .then((result) => {
+            setWeatherData(result);
+          });
     };
     fetchData();
-  }, [lat, long, incident.lat, incident.lng]);
+  }, [incident, incident?.lat, incident?.lng]);
+  if (incident === null) {
+    return (
+      <div>
+        <h1>loading</h1>
+      </div>
+    );
+  }
   return (
     <>
       <div>

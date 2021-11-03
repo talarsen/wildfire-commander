@@ -5,7 +5,7 @@ import GoogleMapReact from "google-map-react";
 import styles from "../App/styles.module.scss";
 
 const IncidentMap = ({ center, zoom }) => {
-  // console.log(center);
+  console.log(center);
   return (
     <div className={styles.map}>
       <GoogleMapReact
@@ -13,7 +13,7 @@ const IncidentMap = ({ center, zoom }) => {
           key: process.env.REACT_APP_INCIDENT_MAP,
           language: "en",
         }}
-        defaultCenter={center}
+        center={center}
         defaultZoom={zoom}
         yesIWantToUseGoogleMapApiInternals //this is important!
         onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
