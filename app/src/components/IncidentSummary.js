@@ -15,7 +15,7 @@ const IncidentSummary = ({ incidentNumber }) => {
   }, [incidentNumber]);
   return (
     <>
-      <h2>Incident Summary</h2>
+      <h2 className={styles.sectionTitle}>Incident Summary</h2>
       <div className={styles.summaryContainer}>
         <div className={styles.card}>
           <div className={styles.cardIcon}>
@@ -91,7 +91,7 @@ const IncidentSummary = ({ incidentNumber }) => {
             {" "}
             <Icon icon="ic:sharp-night-shelter" />{" "}
           </div>
-          <div className={styles.cardTitle}>
+          <div className={styles.cardTitleEvacations}>
             <h5>Current Evacuations</h5>
             <h4>{incident.current_evacuations}</h4>
           </div>

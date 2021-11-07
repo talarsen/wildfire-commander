@@ -3,8 +3,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../App/styles.module.scss";
 
