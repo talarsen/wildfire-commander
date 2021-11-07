@@ -27,7 +27,7 @@ IncidentMap.defaultProps = {
     lat: 40.01,
     lng: -121.23,
   },
-  zoom: 6,
+  zoom: 8,
 };
 
 const handleApiLoaded = (map, maps) => {

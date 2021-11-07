@@ -38,7 +38,7 @@ const Incident = ({ incidentNumber }) => {
   }
   return (
     <>
-      <div>
+      <div className={styles.incidentPageContainer}>
         <div>
           <h1 className={styles.incidentTitle}>{incident.incident_name}</h1>
         </div>
@@ -47,22 +47,22 @@ const Incident = ({ incidentNumber }) => {
             CA-BTU-00{incident.incident_number}
           </h3>
         </div>
+        <IncidentMap
+          center={{
+            lat: parseFloat(incident.lat),
+            lng: parseFloat(incident.lng),
+          }}
+          incidentNumber={incidentNumber}
+        />
+        <IncidentSummary incidentNumber={incidentNumber} />
+        <div className="App">
+          {typeof weatherData.main != "undefined" ? (
+            <Weather weatherData={weatherData} />
+          ) : (
+            <div></div>
+          )}
+        </div>
       </div>
-      <IncidentSummary incidentNumber={incidentNumber} />
-      <div className="App">
-        {typeof weatherData.main != "undefined" ? (
-          <Weather weatherData={weatherData} />
-        ) : (
-          <div></div>
-        )}
-      </div>
-      <IncidentMap
-        center={{
-          lat: parseFloat(incident.lat),
-          lng: parseFloat(incident.lng),
-        }}
-        incidentNumber={incidentNumber}
-      />
     </>
   );
 };
