@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { Icon } from "@iconify/react";
+import { format } from "date-fns";
 
 import styles from "../App/styles.module.scss";
 import * as apiClient from "../apiClient";
@@ -13,6 +14,8 @@ const IncidentSummary = ({ incidentNumber }) => {
   React.useEffect(() => {
     loadIncident();
   }, [incidentNumber]);
+  console.log(typeof incident.start_date);
+
   return (
     <>
       <h2 className={styles.sectionTitle}>Incident Summary</h2>
@@ -23,7 +26,10 @@ const IncidentSummary = ({ incidentNumber }) => {
           </div>
           <div className={styles.cardTitle}>
             <h5>Start Date</h5>
-            <h4>{incident.start_date}</h4>
+            <h4>
+              {incident.start_date &&
+                format(new Date(incident.start_date), "MMM dd, yyyy")}
+            </h4>
           </div>
         </div>
         <div className={styles.card}>
