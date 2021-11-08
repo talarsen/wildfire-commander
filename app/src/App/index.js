@@ -20,7 +20,7 @@ const App = () => {
         incidentNumber={incidentNumber}
         setIncidentNumber={setIncidentNumber}
       />
-      <main style={{ height: "100vh" }}>
+      <main style={{ height: "100vh", width: "100vw" }}>
         <Incident incidentNumber={incidentNumber} />
         <Routes>
           <Route exact path="/incident1" render={incidentNumber} />
