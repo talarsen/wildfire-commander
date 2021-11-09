@@ -33,14 +33,23 @@ const weatherData = {
   name: "Quincy",
   cod: 200,
 };
-test("should show Weather component", () => {
+test("should show name of city weather", () => {
   const { getByText } = render(<Weather weatherData={weatherData} />);
-  expect(true).toBe(true);
   expect(getByText("Quincy")).toBeTruthy();
 });
-//passing weatherData and rendering correctly
 
-//example of how to test a react library
-// jest.mock('a-library', () => ({
-//   libraryFunctionName: jest.fn(),
-// }));
+test("should show wind speed", () => {
+  const { getByText } = render(<Weather weatherData={weatherData} />);
+  expect(getByText("6.98 mph")).toBeTruthy();
+});
+
+test("should show temperature", () => {
+  const { getByText } = render(<Weather weatherData={weatherData} />);
+
+  expect(getByText("54 °F")).toBeTruthy();
+});
+
+test("should show humidity", () => {
+  const { getByText } = render(<Weather weatherData={weatherData} />);
+  expect(getByText("80%")).toBeTruthy();
+});

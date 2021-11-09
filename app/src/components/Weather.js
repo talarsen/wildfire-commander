@@ -32,7 +32,7 @@ const Weather = ({ weatherData }) => {
             <p>{weatherData.name}</p>
           </div>
           <div className={styles.weatherCardTitle}>
-            <h4>{weatherData.main.temp} &deg;F</h4>
+            <h4>{Math.round(weatherData.main.temp)} &deg;F</h4>
           </div>
           <div className={styles.weatherCardTitle}>
             <h5>
