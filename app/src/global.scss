@@ -6,27 +6,35 @@
     local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"),
     local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
+html, body { 
+  height: 100%;   
+  width: 100%; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 
 body {
   font-family: "system";
 }
 
 
-html {
-  box-sizing: border-box;
-}
+// html {
+//   box-sizing: border-box;
+// }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+// *,
+// *:before,
+// *:after {
+//   box-sizing: inherit;
+// }
 
-h1 {
-  font-size: 2.25rem;
-  margin: 1.5rem 0 0.5rem;
-}
-h1 {
-  font-size: 2.25rem;
-  margin: 1.5rem 0 0.5rem;
-}
+// h1 {
+//   font-size: 2.25rem;
+//   margin: 1.5rem 0 0.5rem;
+// }
+// h1 {
+//   font-size: 2.25rem;
+//   margin: 1.5rem 0 0.5rem;
+// }

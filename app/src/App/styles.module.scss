@@ -1,8 +1,4 @@
-html, body { 
-  height: 100%;   
-  width: 100%; 
-  margin: 0;
-  padding: 0; }
+
 $incidentRed: #920000;
 
 /***** Wildfire Commander Header *******/
@@ -76,7 +72,7 @@ $incidentRed: #920000;
     "incidentLabels"
     "incidentSummary"
     "incidentWeather";
-  justify-items: center;
+    justify-items: center;
 }
 
 
@@ -278,13 +274,43 @@ h5 {
   .headerTitle {font-size: 46px;}
   .headerSubtitle {font-size: 18px;}
   // ---------------
-  .weatherContainer { 
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    .incidentPageContainer {
+      display: grid;
+      margin-top: 150px;
+      gap: 20px;
+      grid-template-areas: 
+        "incidentName"
+        "incidentNumber"
+        "incidentMap"
+        "incidentLabels"
+        "incidentSummary"
+        "incidentWeather";
+        justify-content: center;
+    }
+    .weatherContainer { 
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .summaryContainer {
+      display: inline-flex;
+      justify-content: space-evenly;
+      width: 50%;
+      flex-wrap: wrap;
+      grid-area: incidentSummary;
+  }
+  .map {
+    display: inline;
+    width: 400px;
+    height: 250px; 
+    justify-content: center;
+    grid-area: incidentMap;
   }
 }
-
+@media (max-width: 376px){
+  .headerTitle {font-size: 46px;}
+  .headerSubtitle {font-size: 18px;}
+}
 @media (max-width: 412px){
   .headerTitle {font-size: 46px;}
   .headerSubtitle {font-size: 14px;}

@@ -25,8 +25,8 @@ const Weather = ({ weatherData }) => {
 
   return (
     <>
-      <h2 className={styles.sectionTitle}> Current Lat/Long Weather</h2>
       <div className={styles.weatherContainer}>
+        <h2 className={styles.sectionTitle}> Current Lat/Long Weather</h2>
         <div className={styles.weatherCard}>
           <div className={styles.weatherCardTitle}>
             <p>{weatherData.name}</p>
