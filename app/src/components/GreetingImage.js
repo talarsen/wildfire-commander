@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 import * as React from "react";
 
+import forestFire from "./forestFire.jpg";
 import plane from "./plane.jpg";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const GreetingImage = (props) => {
@@ -15,7 +15,7 @@ const GreetingImage = (props) => {
   };
   return (
     <div style={greetingImage}>
-      <img src={plane} style={greetingImage} alt="plane fighting fire" />
+      <img src={forestFire} style={greetingImage} alt="plane fighting fire" />
     </div>
   );
 };

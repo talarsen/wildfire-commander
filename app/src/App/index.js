@@ -1,6 +1,9 @@
 import * as React from "react";
 
 import { Routes, Route } from "react-router-dom";
+
+// eslint-disable-next-line import/order
+import GreetingImage from "../components/GreetingImage";
 // import Tasks from "../Tasks";
 
 import Header1 from "../components/Header1";
@@ -9,7 +12,7 @@ import Incident from "../components/Incident.js";
 import NavBar from "../components/NavBar";
 
 const App = () => {
-  const [incidentNumber, setIncidentNumber] = React.useState(54321);
+  const [incidentNumber, setIncidentNumber] = React.useState(null);
 
   return (
     <>
@@ -21,12 +24,11 @@ const App = () => {
         setIncidentNumber={setIncidentNumber}
       />
       <main style={{ height: "100vh", width: "100vw" }}>
-        <Incident incidentNumber={incidentNumber} />
-        <Routes>
-          <Route exact path="/incident1" render={incidentNumber} />
-          <Route exact path="/incident2" render={incidentNumber} />
-          <Route exact path="/incident3" render={incidentNumber} />
-        </Routes>
+        {incidentNumber === null ? (
+          <GreetingImage />
+        ) : (
+          <Incident incidentNumber={incidentNumber} />
+        )}
       </main>
     </>
   );
