@@ -33,8 +33,6 @@ Users should be able to...
 * Zoom in and out on the map and move the map
 * View crucial data from the chosen fire 
 * View weather in the vicinity of the fire
-***
-<br>
 
 ## Nice to Haves
 
@@ -56,5 +54,5 @@ Thank you to the patient mentors who spent countless hours helping me throughout
 * Christina Rodriquez
 
 
-## [Credits](./CONTRIBUTORS)
+## [Credits](./CONTRIBUTORS.md)
 
