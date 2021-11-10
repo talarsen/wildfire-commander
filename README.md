@@ -18,10 +18,14 @@ The Wildfire Commander app is a dashboard that renders data from a particular wi
 
 ### [🔥 See Wildfire Commander in Action 🔥 ](https://stark-badlands-48876.herokuapp.com/) 
 
+<br>
 
+***
+<br>
 
 ## 💻 Click [here](./docs/technicalInformation.md) for Technical Information on Running This App.
 
+<br>
 
 ## MVP
 
@@ -40,11 +44,11 @@ Users should be able to...
 * A backend with a login that allows the fire weather specialist team and the situational unit team to input data. 
 * Additional links to render more data about the fire such as critical needs, fire weather report, incident objectives, a link to the IAP-Incident Action Plan, maps for the day, and resource tracking. 
 * Integration with Esri's ArcGIS mapping software.
-* A QR code for maps such as operations, communications, progression, planning, briefing, public information, evcuation, suppression repair, air operations, pilot, and transportation. 
+* A QR code for maps such as operations, communications, progression, planning, briefing, public information, evacuation, suppression repair, air operations, pilot, and transportation. 
 
 
 ## Acknowledgements 🙏 👏 
-Thank you to the patient mentors who spent countless hours helping me throughout this project and to the managers at [Techtonica](https://techtonica.org/) who believed in me, helped guide me and supported me in my journey to becoming a software developer. 
+Thank you to the patient mentors who spent countless hours helping me throughout this project and to the managers at [Techtonica](https://techtonica.org/) who believed in me, guided me and supported me in my journey to becoming a software developer. 
 
 * Andrew Peterson 
 * Danielle Penny
