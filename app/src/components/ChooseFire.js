@@ -31,7 +31,7 @@ function ChooseFire({ setIncidentNumber }) {
 
           <Dropdown.Menu variant="dark">
             {incidents.map((incident) => (
-              <Link key={incident.incident_number}>
+              <Link to="">
                 <Dropdown.Item eventKey={incident.incident_number}>
                   {incident.incident_name}
                 </Dropdown.Item>
