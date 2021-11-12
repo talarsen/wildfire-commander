@@ -55,7 +55,7 @@ Thank you to the patient mentors who spent countless hours helping me throughout
 * Richie Thomas
 * George Song
 * Sarah Cawley
-* Christina Rodriquez
+* Cristina Rodriguez
 
 
 ## [Credits](./CONTRIBUTORS.md)
