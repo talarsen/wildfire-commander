@@ -9,12 +9,11 @@ import * as apiClient from "../apiClient";
 const IncidentSummary = ({ incidentNumber }) => {
   const [incident, setIncident] = React.useState([]);
 
-  const loadIncident = async () =>
-    setIncident(await apiClient.getOneIncident(incidentNumber));
   React.useEffect(() => {
+    const loadIncident = async () =>
+      setIncident(await apiClient.getOneIncident(incidentNumber));
     loadIncident();
   }, [incidentNumber]);
-  console.log(typeof incident.start_date);
 
   return (
     <>

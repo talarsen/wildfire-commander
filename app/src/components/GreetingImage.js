@@ -1,21 +1,19 @@
 /* eslint-disable jsx-a11y/alt-text */
 import * as React from "react";
 
-import forestFire from "./forestFire.jpg";
-import plane from "./plane.jpg";
+import styles from "../App/styles.module.scss";
+
+import forestFire from "./forestFire.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const GreetingImage = (props) => {
-  const greetingImage = {
-    display: "block",
-    "margin-top": "100px",
-    "margin-left": "auto",
-    "margin-right": "auto",
-    width: "75%",
-  };
   return (
-    <div style={greetingImage}>
-      <img src={forestFire} style={greetingImage} alt="plane fighting fire" />
+    <div className={styles.greetingImageDiv}>
+      <img
+        src={forestFire}
+        className={styles.greetingImage}
+        alt="plane fighting fire"
+      />
     </div>
   );
 };

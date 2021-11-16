@@ -5,7 +5,6 @@ import GoogleMapReact from "google-map-react";
 import styles from "../App/styles.module.scss";
 
 const IncidentMap = ({ center, zoom }) => {
-  console.log(center);
   return (
     <div className={styles.map}>
       <GoogleMapReact

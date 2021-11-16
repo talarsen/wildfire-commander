@@ -9,9 +9,10 @@ import Weather from "./Weather";
 const Incident = ({ incidentNumber }) => {
   const [incident, setIncident] = React.useState(null);
   const [weatherData, setWeatherData] = React.useState([]);
-  const loadIncident = async () =>
-    setIncident(await apiClient.getOneIncident(incidentNumber));
+
   React.useEffect(() => {
+    const loadIncident = async () =>
+      setIncident(await apiClient.getOneIncident(incidentNumber));
     loadIncident();
   }, [incidentNumber]);
 
