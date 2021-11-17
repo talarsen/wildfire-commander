@@ -60,3 +60,10 @@ Thank you to the patient mentors who spent countless hours helping me throughout
 
 ## [Credits](./CONTRIBUTORS.md)
 
+<img src="wildfireCommander.png"
+     alt="Home page of Wildfire Commander"
+      />
+
+<img src="wildfireCommander2.png"
+     alt="Home page of Wildfire Commander"
+      />
