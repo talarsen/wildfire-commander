@@ -3,16 +3,15 @@ import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { Link } from "react-router-dom";
 
-// import * as apiClient from "../apiClient";
 import { getIncidents } from "../apiClient";
-// import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+
 function ChooseFire({ setIncidentNumber }) {
   const [incidents, setIncidents] = React.useState([]);
 
   const loadIncidents = async () => setIncidents(await getIncidents());
-  console.log(getIncidents());
+
   React.useEffect(() => {
     loadIncidents();
   }, []);
@@ -29,7 +28,6 @@ function ChooseFire({ setIncidentNumber }) {
           >
             Select A Fire
           </Dropdown.Toggle>
-
           <Dropdown.Menu variant="dark">
             {incidents.map((incident) => (
               <Link to="" key={incident.incident_number}>

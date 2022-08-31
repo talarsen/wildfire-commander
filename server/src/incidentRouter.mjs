@@ -22,9 +22,5 @@ incidentRouter.get("/:incident_number", async (req, res) => {
 });
 
 incidentRouter.use(express.json());
-// incidentRouter.post("/", async (request, response) => {
-//   const task = await db.addTask(request.body.name);
-//   response.status(201).json(task);
-// });
 
 export default incidentRouter;

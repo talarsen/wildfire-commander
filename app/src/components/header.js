@@ -15,9 +15,3 @@ const Header = () => {
 };
 
 export default Header;
-// {/* <>
-//       <header className={styles.header}>
-//         <h1 className={styles.headingText}>{process.env.REACT_APP_TITLE}</h1>
-//         {/* <p className={styles.subtitle}>{process.env.REACT_APP_SUBTITLE}</p> */}
-//       </header>
-//     </> */}

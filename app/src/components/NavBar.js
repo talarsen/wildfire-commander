@@ -7,10 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../App/styles.module.scss";
 
 import ChooseFire from "./ChooseFire";
-
-// import Dropdown from "./Dropdown";
-
-function NavBar({ incidentNumber, setIncidentNumber }) {
+function NavBar({ setIncidentNumber }) {
   return (
     <>
       <nav className={styles.navbar}>
