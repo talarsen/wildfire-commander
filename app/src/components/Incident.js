@@ -1,3 +1,7 @@
+  /*This component is rendering the page according to the fire incident number. It is also fetching data from the Open Weather API to render to
+  location based off of the lat/long of the fire. I am most proud of this component because it was a struggle to learn how the UseEffect hook worked in conjunction 
+  fetching data. Also, I love that the major features of the app come together in this component. The map, the summary and the current weather. */
+
 import * as React from "react";
 
 import styles from "../App/styles.module.scss";
