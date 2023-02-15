@@ -3,14 +3,12 @@ import express from "express";
 import * as db from "./db.mjs";
 
 const incidentRouter = express.Router();
-//https://hostname/api/incidents/
-//on line 8 the / is the end of incidents
+
 incidentRouter.get("/", async (request, response) => {
   const incidents = await db.getIncidents();
   response.json(incidents);
 });
-//get one incident
-//not much different from get all but specify params in route.
+
 incidentRouter.get("/:incident_number", async (req, res) => {
   try {
     console.log("ID:", req.params.incident_number);
